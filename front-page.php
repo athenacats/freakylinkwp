@@ -123,11 +123,11 @@
         </div>
     </div>
 
-    <footer class="footer text-center py-2 theme-bg-dark">
-        <div class="container">
+    <footer class="footer text-center py-4">
 
-            <p class="copyright"><a href="https://chena.dev/">Chena</a></p>
-        </div>
+
+        <p class="copyright"><a href="https://chena.dev/">Copyright &copy; Freaky link 2024</a></p>
+
 
     </footer>
 
