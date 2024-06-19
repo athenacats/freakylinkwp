@@ -16,7 +16,7 @@
     <header class="">
         <div class="container">
             <div class="left">
-                <img routerLink="/" src="../../../../assets/freaky_link_logo.png" alt="Logo for the Freaky Link" />
+                <img href="index.php" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/freaky_link_logo.png" alt="Logo for the Freaky Link" />
                 <a routerLink="/" class="logo">The Freaky Link</a>
             </div>
             <nav>
@@ -63,7 +63,7 @@
                 </div>
                 <div class="main">
                     <a routerLink="/home">
-                        <img src="../../../../assets/lingerie_1.jpeg" alt="Woman in dress and tutu sitting on floor seductively." /></a>
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/lingerie_1.jpeg" alt="Woman in dress and tutu sitting on floor seductively." /></a>
                 </div>
             </div>
         </div>
@@ -72,25 +72,25 @@
             <div class="categories1">
                 <div class="categoriesContainer">
                     <div class="choose">
-                        <a routerLink="/home"><img src="../../../../assets/lady_lingerie.jpg" alt="Black and white image of woman in hat in the shadow." /></a>
+                        <a routerLink="/home"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/lady_lingerie.jpg" alt="Black and white image of woman in hat in the shadow." /></a>
                         <div class="link">
                             <a routerLink="/home">For Her</a>
                         </div>
                     </div>
                     <div class="choose">
-                        <a routerLink="/home"><img src="../../../../assets/men_lingerie.jpg" alt="Man's face photographed in the shadow." /></a>
+                        <a routerLink="/home"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/men_lingerie.jpg" alt="Man's face photographed in the shadow." /></a>
                         <div class="link">
                             <a routerLink="/home">For Him</a>
                         </div>
                     </div>
                     <div class="choose">
-                        <a routerLink="/home"><img src="../../../../assets/lady_lingerie_3.jpg" alt="Flat lay image of red bra and flowers." /></a>
+                        <a routerLink="/home"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/lady_lingerie_3.jpg" alt="Flat lay image of red bra and flowers." /></a>
                         <div class="link">
                             <a routerLink="/home">Lingerie</a>
                         </div>
                     </div>
                     <div class="choose">
-                        <a routerLink="/home"><img src="../../../../assets/accessories.jpg" alt="Perfume bottle photographed against leaves and black background." /></a>
+                        <a routerLink="/home"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images//accessories.jpg" alt="Perfume bottle photographed against leaves and black background." /></a>
                         <div class="link">
                             <a routerLink="/home">Accessories</a>
                         </div>
