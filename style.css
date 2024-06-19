@@ -22,6 +22,7 @@ Tags: sex-store
 }
 
 html {
+  margin-top: 0 !important;
   font-size: 16px;
 }
 
@@ -29,7 +30,7 @@ html,
 body {
   width: 100%;
   overflow-x: hidden;
-  height: 100%;
+  min-height: 100vh;
 }
 
 body {
@@ -127,7 +128,6 @@ footer {
 
 .container {
   display: flex;
-
   justify-content: center;
   align-items: center;
   font-family: "EB Garamond", serif;
@@ -146,18 +146,8 @@ footer {
   width: 100vw;
 }
 /*from landingpage.css*/
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-body {
-  margin: 0; /* Reset the default margin */
-  padding: 0;
-}
-
-.container {
+.main-wrapper {
   width: 100vw;
   margin: 0;
   padding: 0;

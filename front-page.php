@@ -19,7 +19,7 @@
                 <img href="index.php" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/freaky_link_logo.png" alt="Logo for the Freaky Link" />
                 <a routerLink="/" class="logo">The Freaky Link</a>
             </div>
-            <nav>
+            <nav class="navbar navbar-expand-lg">
                 <ul>
                     <li *ngIf="!user.token">
                         <a routerLink="/login">Login</a>
@@ -47,7 +47,7 @@
         </div>
     </header>
 
-    <div class="container">
+    <div class="main-wrapper">
         <div class="introduction">
             <app-search></app-search>
             <div class="content">
