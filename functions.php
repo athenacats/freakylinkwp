@@ -8,3 +8,11 @@ function freakylink_register_styles()
 }
 
 add_action('wp_enqueue_scripts', 'freakylink_register_styles');
+
+
+function freakylink_register_scripts()
+{
+    wp_enqueue_script('freakylink_bootstrapjs', "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js", array(), '5.3.2', true);
+}
+
+add_action('wp_enqueue_scripts', 'freakylink_register_scripts');
