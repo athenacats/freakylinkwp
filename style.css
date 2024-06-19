@@ -8,6 +8,149 @@ Author URI: https://chena.dev/
 Tags: sex-store
 */
 
+/* You can add global styles to this file, and also import other style files */
+
+/*from main style.css file*/
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+body {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+html,
+button {
+  font-family: "EB Garamond", serif;
+}
+
+body {
+  margin: 0;
+  background-color: var(--primary);
+}
+
+a {
+  text-decoration: none;
+}
+
+body.lightTheme {
+  --primary: #fce5fc;
+  --secondary: #ffcdfd;
+  --links: rgb(36, 6, 36);
+  --text: rgb(0, 0, 0);
+  --shadow: #0a080a;
+  --shadowSaturated: rgb(255, 205, 253);
+  --shadowSaturatedTransparent: rgb(255, 205, 253, 0.8);
+  --tertiary: #4d0d4d;
+  --strong: #ebc7eb;
+  --brighterColor: rgb(36, 6, 36);
+  --dimmerBrighterColor: rgb(36, 6, 36, 0.8);
+  --lingerieTabs: rgb(250, 84, 244);
+}
+
+.dark-theme {
+  --primary: #6e5d6e;
+  --secondary: #1f1a1f;
+  --links: rgb(255, 205, 253);
+  --text: white;
+  --shadow: #0a080a;
+  --shadowSaturated: rgb(36, 6, 36);
+  --lingerieTabs: rgb(36, 6, 36);
+  --shadowSaturatedTransparent: rgb(36, 6, 36, 0.8);
+  --tertiary: #ebc7eb;
+  --strong: #4d0d4d;
+  --brighterColor: rgb(250, 84, 244);
+  --dimmerBrighterColor: rgb(255, 204, 253, 0.8);
+}
+
+:root {
+  --primary: #6e5d6e;
+  --secondary: #1f1a1f;
+  --links: rgb(255, 205, 253);
+  --text: white;
+  --shadow: #0a080a;
+  --shadowSaturated: rgb(36, 6, 36);
+  --lingerieTabs: rgb(36, 6, 36);
+  --shadowSaturatedTransparent: rgb(36, 6, 36, 0.8);
+  --tertiary: #ebc7eb;
+  --strong: #4d0d4d;
+  --brighterColor: rgb(250, 84, 244);
+  --dimmerBrighterColor: rgb(255, 204, 253, 0.8);
+}
+
+::-webkit-scrollbar {
+  width: 0.4rem;
+  height: 0.2rem;
+  border: 1px solid var(--brighterColor);
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 0;
+  background: var(--primary);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4rem;
+  background: var(--strong);
+}
+
+/*from app.component.css*/
+.content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--secondary);
+  padding: 0;
+  font-family: "EB Garamond", serif;
+  height: 1.5rem;
+}
+
+.container {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  font-family: "EB Garamond", serif;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  color: var(--links);
+}
+p {
+  padding: 0;
+  margin: 0;
+  align-self: center;
+}
+
+footer {
+  width: 100vw;
+}
+/*from landingpage.css*/
 * {
   margin: 0;
   padding: 0;
@@ -241,6 +384,231 @@ h2 {
 
   button {
     height: 2rem;
+    font-size: 1.2rem;
+  }
+}
+
+/*from header.css file*/
+header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--secondary);
+  padding: 0;
+  font-family: "Dancing Script", cursive;
+  height: 6rem;
+}
+
+img {
+  border-radius: 50%;
+  justify-content: flex-start;
+  width: 4.5rem;
+}
+
+img:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+li.menuContainer a {
+  color: var(--links);
+}
+
+li.menuContainer a:hover {
+  background: var(--tertiary);
+  color: var(--secondary);
+  cursor: pointer;
+}
+
+a {
+  color: var(--links);
+  align-self: center;
+}
+
+a:hover {
+  background: var(--tertiary);
+  color: var(--secondary);
+  cursor: pointer;
+}
+
+a:hover span {
+  background-color: var(--secondary);
+  color: var(--links);
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+a.logo {
+  font-weight: bold;
+  font-size: 2.2rem;
+  padding: 1rem;
+  align-self: center;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  align-self: center;
+  margin: 0;
+}
+
+ul a {
+  padding: 1rem;
+  display: inline-block;
+  font-size: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+}
+
+a span {
+  background-color: var(--links);
+  color: var(--secondary);
+  padding: 0.1rem 0.45rem;
+  border-radius: 100rem;
+  font-size: 0.9rem;
+}
+
+.menuContainer {
+  position: relative;
+}
+
+.menu {
+  position: absolute;
+  z-index: 1;
+  background: var(--secondary);
+  display: none;
+}
+
+.menu.open {
+  display: block;
+}
+.menuContainer:hover .menu {
+  display: block;
+}
+
+.menu a {
+  width: 100%;
+
+  color: var(--links);
+}
+
+.menu a:hover {
+  color: var(--secondary);
+}
+
+.cart {
+  align-self: center;
+}
+
+.left {
+  align-items: center;
+  display: flex;
+  width: 60%;
+}
+
+.themeButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  background-color: var(--secondary);
+  outline: none;
+  border: none;
+  align-self: center;
+}
+
+svg {
+  height: 1rem;
+  cursor: pointer;
+  justify-self: self-start;
+}
+
+svg path {
+  fill: var(--links);
+}
+
+@media screen and (max-width: 770px) {
+  img {
+    width: 4rem;
+  }
+  a.logo {
+    font-size: 1.5rem;
+  }
+  ul a {
+    font-size: 1.3rem;
+    padding-left: 0.4rem;
+    padding-right: 0.3rem;
+  }
+  a span {
+    font-size: 0.6rem;
+  }
+  .cart a {
+    display: flex;
+    justify-content: space-around;
+    gap: 0.2rem;
+  }
+  .cart {
+    align-items: center;
+    align-self: center;
+    align-content: center;
+  }
+  .container {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .header {
+    height: 4.5rem;
+  }
+  img {
+    width: 3rem;
+  }
+  a.logo {
+    font-size: 1.3rem;
+  }
+  ul a {
+    font-size: 1rem;
+    padding-left: 0.4rem;
+    padding-right: 0.3rem;
+  }
+  .cart a {
+    display: flex;
+    justify-content: space-around;
+    gap: 0.2rem;
+  }
+  a span {
+    font-size: 0.5rem;
+    padding: 0.1rem 0.35rem;
+    border-radius: 200px;
+  }
+  .cart {
+    align-items: center;
+    align-self: center;
+    align-content: center;
+  }
+  nav ul {
+    padding-left: 0;
+  }
+  .container {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 372px) {
+  a.logo {
     font-size: 1.2rem;
   }
 }

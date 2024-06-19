@@ -12,7 +12,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body>
+<body class="content">
     <header>
         <div class="container">
             <div class="left">
@@ -124,8 +124,10 @@
     </div>
 
     <footer class="footer text-center py-2 theme-bg-dark">
+        <div class="container">
 
-        <p class="copyright"><a href="https://chena.dev/">Chena</a></p>
+            <p class="copyright"><a href="https://chena.dev/">Chena</a></p>
+        </div>
 
     </footer>
 
