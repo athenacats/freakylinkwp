@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <header class="">
+    <header class="page-title">
         <div class="container">
             <div class="left">
                 <img href="index.php" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/freaky_link_logo.png" alt="Logo for the Freaky Link" />
@@ -130,6 +130,8 @@
 
 
     </footer>
+
+    <?php wp_footer(); ?>
 
 
 </body>
