@@ -12,8 +12,8 @@
     <?php wp_head(); ?>
 </head>
 
-<body class="content">
-    <header>
+<body>
+    <header class="">
         <div class="container">
             <div class="left">
                 <img routerLink="/" src="../../../../assets/freaky_link_logo.png" alt="Logo for the Freaky Link" />

@@ -113,11 +113,6 @@ body.lightTheme {
 }
 
 /*from app.component.css*/
-.content {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-}
 
 footer {
   margin-top: auto;
