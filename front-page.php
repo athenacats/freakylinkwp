@@ -8,6 +8,8 @@
     <meta name="description" content="Freaky Link Theme">
     <meta name="author" content="https://chena.dev/">
     <title>Freaky Link Theme</title>
+
+    <?php wp_head(); ?>
 </head>
 
 <body>
