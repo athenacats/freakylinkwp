@@ -1,10 +1,5 @@
 <?php get_header(); ?>
-<div class='search'>
 
-    <input class="search-input" #s type="text" placeholder="Search Our Catalog" (keyup.enter)="search(s.value)" [value]="searchTerm" />
-    <button class="search-button" (click)="search(s.value)">Search</button>
-
-</div>
 <div class="main-wrapper">
     <div class="introduction">
 
@@ -17,7 +12,7 @@
                     for you to shop from the comfort of wherever you are, with full
                     assurance that you’ll get exactly what you desire.
                 </p>
-                <button routerLink="/home" type="button">Explore More!</button>
+                <button class="default-button" routerLink="/home" type="button">Explore More!</button>
             </div>
             <div class="main">
                 <a routerLink="/home">

@@ -205,7 +205,7 @@ p {
   color: var(--links);
 }
 
-button {
+.default-button {
   color: var(--shadowSaturated);
   background-color: var(--links);
   font-family: "Dancing Script", cursive;
@@ -218,7 +218,7 @@ button {
   outline: none;
 }
 
-button:hover {
+.default-button:hover {
   opacity: 0.8;
   cursor: pointer;
 }
@@ -334,6 +334,12 @@ h2 {
   background-color: var(--links);
   border: 1px solid var(--shadowSaturated);
   outline: none;
+  font-family: "Dancing Script", cursive;
+
+  height: 3rem;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
 }
 
 @media screen and (max-width: 520px) {
@@ -382,13 +388,13 @@ header {
   height: 6rem;
 }
 
-img {
+header img {
   border-radius: 50%;
   justify-content: flex-start;
   width: 4.5rem;
 }
 
-img:hover {
+header img:hover {
   opacity: 0.7;
   cursor: pointer;
 }
@@ -403,23 +409,23 @@ li.menuContainer a:hover {
   cursor: pointer;
 }
 
-a {
+header a {
   color: var(--links);
   align-self: center;
 }
 
-a:hover {
+header a:hover {
   background: var(--tertiary);
   color: var(--secondary);
   cursor: pointer;
 }
 
-a:hover span {
+header a:hover span {
   background-color: var(--secondary);
   color: var(--links);
 }
 
-.container {
+header.container {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -450,7 +456,7 @@ ul a {
   align-self: center;
 }
 
-a span {
+header a span {
   background-color: var(--links);
   color: var(--secondary);
   padding: 0.1rem 0.45rem;
@@ -490,7 +496,7 @@ a span {
   align-self: center;
 }
 
-.left {
+header.left {
   align-items: center;
   display: flex;
   width: 60%;
@@ -502,7 +508,7 @@ a span {
   justify-content: center;
 }
 
-button {
+header button {
   background-color: var(--secondary);
   outline: none;
   border: none;
@@ -520,8 +526,8 @@ svg path {
 }
 
 @media screen and (max-width: 770px) {
-  img {
-    width: 4rem;
+  header img {
+    width: 3rem;
   }
   a.logo {
     font-size: 1.5rem;
@@ -544,7 +550,7 @@ svg path {
     align-self: center;
     align-content: center;
   }
-  .container {
+  header.container {
     margin-left: 0;
     margin-right: 0;
   }
@@ -653,10 +659,5 @@ svg path {
     align-content: center;
     align-self: center;
     font-size: 0.9rem;
-  }
-
-  .search {
-    margin: 0.5rem auto;
-    width: 80%;
   }
 }

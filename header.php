@@ -46,3 +46,9 @@
             </nav>
         </div>
     </header>
+    <div class='search'>
+
+        <input class="search-input" #s type="text" placeholder="Search Our Catalog" (keyup.enter)="search(s.value)" [value]="searchTerm" />
+        <button class="search-button" (click)="search(s.value)">Search</button>
+
+    </div>
