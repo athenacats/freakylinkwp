@@ -27,3 +27,14 @@ function freakylink_register_scripts()
 }
 
 add_action('wp_enqueue_scripts', 'freakylink_register_scripts');
+
+function display_user_details()
+{
+    if (is_user_logged_in()) {
+        $current_user = wp_get_current_user();
+        $user_display_name = !empty($current_user->user_firstname) ? $current_user->user_firstname : $current_user->display_name;
+        return esc_html($user_display_name);
+    } else {
+        return '';
+    }
+}

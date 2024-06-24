@@ -25,8 +25,12 @@
                         <a routerLink="/login">Login</a>
                     </li>
                     <li *ngIf="isAuth" class="menuContainer">
-                        <a>{{ user.name }}</a>
-                        <div class="menu">
+                        <?php
+                        $user_display_name = display_user_details();
+                        if (!empty($user_display_name)) {
+                            echo '<a>' . $user_display_name . '</a>';
+                        }
+                        ?> <div class="menu">
                             <a routerLink="/profile" (click)="closeMenu()">Profile</a>
                             <a routerLink="/orders" (click)="closeMenu()">Orders</a>
                             <a (click)="logout()">Logout</a>
