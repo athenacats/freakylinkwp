@@ -1,5 +1,13 @@
 <?php
 
+function freakylink_theme_support()
+{
+    add_theme_support('title-tag'); //dynamically add title tag
+
+}
+add_action('after_setup_theme', 'freakylink_theme_support');
+
+
 function freakylink_register_styles()
 {
     $version = wp_get_theme()->get('Version');
@@ -19,4 +27,3 @@ function freakylink_register_scripts()
 }
 
 add_action('wp_enqueue_scripts', 'freakylink_register_scripts');
-?>
