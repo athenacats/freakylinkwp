@@ -38,3 +38,8 @@ function display_user_details()
         return '';
     }
 }
+
+function get_cart_item_count() {
+    $cart_item_count = WC()->cart->get_cart_contents_count();    
+    return esc_html($cart_item_count);
+}

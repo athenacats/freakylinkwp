@@ -37,7 +37,9 @@
                         </div>
                     </li>
                     <li class="cart">
-                        <a routerLink="/cart-page">Cart <span *ngIf="cartQuantity">{{ cartQuantity }}</span></a>
+                        <a routerLink="/cart-page">Cart <span><?php
+   echo get_cart_item_count()
+    ?></span></a>
                     </li>
                     <li class="themeButton">
                         <button (click)="toggleLightTheme()" class="lighTheme">
