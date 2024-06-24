@@ -21,10 +21,15 @@
             </div>
             <nav class="navbar navbar-expand-lg">
                 <ul>
-                    <li *ngIf="!user.token">
-                        <a routerLink="/login">Login</a>
+                    <li>
+                    <?php
+                        $user_display_name = display_user_details();
+                        if (empty($user_display_name)) {
+                            echo '<a href="/login">Login</a>';
+                        }
+                        ?> 
                     </li>
-                    <li *ngIf="isAuth" class="menuContainer">
+                    <li class="menuContainer">
                         <?php
                         $user_display_name = display_user_details();
                         if (!empty($user_display_name)) {
