@@ -43,3 +43,12 @@ function get_cart_item_count() {
     $cart_item_count = WC()->cart->get_cart_contents_count();    
     return esc_html($cart_item_count);
 }
+
+function freakylink_menus() {
+    $locations = array(
+        'primary' => 'Primary Menu',
+        'footer' => 'Footer Menu'
+    );
+    register_nav_menus( $locations );
+}
+add_action( 'init', 'freakylink_menus' );
