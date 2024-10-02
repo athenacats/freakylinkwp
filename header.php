@@ -14,13 +14,24 @@
 
 <body>
     <header class="page-title">
-        <div class="container">
+        <div class="header-container">
             <div class="left">
                 <img href="index.php" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/freaky_link_logo.png" alt="Logo for the Freaky Link" />
                 <a routerLink="/" class="logo">The Freaky Link</a>
             </div>
+            <?php 
+                wp_nav_menu( 
+                    array(
+                    'menu' => 'primary',
+                    'container' => '',
+                    'theme_location' => 'primary',
+                        )
+                    );
+                ?>
             <nav class="navbar navbar-expand-lg">
+                
                 <ul>
+                
                     <li>
                     <?php
                         $user_display_name = display_user_details();
@@ -36,9 +47,9 @@
                             echo '<a>' . $user_display_name . '</a>';
                         }
                         ?> <div class="menu">
-                            <a routerLink="/profile" (click)="closeMenu()">Profile</a>
-                            <a routerLink="/orders" (click)="closeMenu()">Orders</a>
-                            <a (click)="logout()">Logout</a>
+                            <a class="menuLinks" routerLink="/profile" (click)="closeMenu()">Profile</a>
+                            <a class="menuLinks" routerLink="/orders" (click)="closeMenu()">Orders</a>
+                            <a class="menuLinks" (click)="logout()">Logout</a>
                         </div>
                     </li>
                     <li class="cart">

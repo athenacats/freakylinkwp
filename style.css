@@ -388,10 +388,16 @@ header {
   height: 6rem;
 }
 
+header .left {
+  display: flex;
+  align-items: center;
+}
+
 header img {
   border-radius: 50%;
   justify-content: flex-start;
-  width: 4.5rem;
+  align-content: center;
+  width: 3rem;
 }
 
 header img:hover {
@@ -399,11 +405,14 @@ header img:hover {
   cursor: pointer;
 }
 
-li.menuContainer a {
+.navbar li,
+.menu a {
   color: var(--links);
 }
 
-li.menuContainer a:hover {
+li .menuContainer .menu a:hover,
+.navbar li:hover,
+.menuLinks:hover {
   background: var(--tertiary);
   color: var(--secondary);
   cursor: pointer;
@@ -411,7 +420,7 @@ li.menuContainer a:hover {
 
 header a {
   color: var(--links);
-  align-self: center;
+  align-self: flex-end;
 }
 
 header a:hover {
@@ -425,12 +434,13 @@ header a:hover span {
   color: var(--links);
 }
 
-header.container {
+.header-container {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100%;
+  padding: 0 2rem;
 }
 
 a.logo {
@@ -473,6 +483,7 @@ header a span {
   z-index: 1;
   background: var(--secondary);
   display: none;
+  color: var(--links);
 }
 
 .menu.open {
@@ -606,7 +617,7 @@ svg path {
   display: flex;
   justify-content: center;
   background-color: var(--secondary);
-  padding: 1.5rem auto;
+  padding: 0 1.5rem 1.5rem 1.5rem;
   width: 100%;
 }
 
