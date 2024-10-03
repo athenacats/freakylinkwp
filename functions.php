@@ -12,6 +12,7 @@ function freakylink_register_styles()
 {
     $version = wp_get_theme()->get('Version');
     wp_enqueue_style('freakylink_bootstrap', "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css", array(), '1.0', 'all');
+   wp_enqueue_style('freakylink_fontawesome', "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css", array(), '1.0', "all"); 
     wp_enqueue_style('freakylink_style', get_template_directory_uri() . "/style.css", array('freakylink_bootstrap'), $version, 'all');
 }
 
