@@ -405,33 +405,14 @@ header img:hover {
   cursor: pointer;
 }
 
-.navbar li,
-.menu a {
+.nav-link {
   color: var(--links);
 }
 
-li .menuContainer .menu a:hover,
-.navbar li:hover,
-.menuLinks:hover {
+.nav-link:hover {
   background: var(--tertiary);
   color: var(--secondary);
   cursor: pointer;
-}
-
-header a {
-  color: var(--links);
-  align-self: flex-end;
-}
-
-header a:hover {
-  background: var(--tertiary);
-  color: var(--secondary);
-  cursor: pointer;
-}
-
-header a:hover span {
-  background-color: var(--secondary);
-  color: var(--links);
 }
 
 .header-container {
@@ -457,21 +438,21 @@ ul {
   margin: 0;
 }
 
-ul a {
-  padding: 1rem;
+.nav-item {
+  padding: 0.2rem;
   display: inline-block;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   align-self: center;
 }
 
 header a span {
   background-color: var(--links);
   color: var(--secondary);
-  padding: 0.1rem 0.45rem;
+  padding: 0.25rem 0.25rem;
   border-radius: 100rem;
-  font-size: 0.9rem;
+  font-size: 0.6rem;
 }
 
 .menuContainer {
@@ -495,12 +476,16 @@ header a span {
 
 .menu a {
   width: 100%;
-
   color: var(--links);
+  padding: 0.2rem;
+  padding-left: 0.4rem;
+  font-size: 1.1rem;
 }
 
 .menu a:hover {
+  background: var(--tertiary);
   color: var(--secondary);
+  cursor: pointer;
 }
 
 .cart {
@@ -511,12 +496,6 @@ header.left {
   align-items: center;
   display: flex;
   width: 60%;
-}
-
-.themeButton {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 header button {
