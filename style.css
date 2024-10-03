@@ -438,6 +438,18 @@ ul {
   margin: 0;
 }
 
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255, 205, 253)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar-toggler:hover .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(250, 84, 244)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
 .nav-item {
   padding: 0.2rem;
   display: inline-block;
@@ -445,6 +457,11 @@ ul {
   align-items: center;
   justify-content: space-evenly;
   align-self: center;
+}
+
+.navbar-nav {
+  flex-wrap: wrap;
+  justify-content: end;
 }
 
 header a span {
@@ -496,23 +513,6 @@ header.left {
   align-items: center;
   display: flex;
   width: 60%;
-}
-
-header button {
-  background-color: var(--secondary);
-  outline: none;
-  border: none;
-  align-self: center;
-}
-
-svg {
-  height: 1rem;
-  cursor: pointer;
-  justify-self: self-start;
-}
-
-svg path {
-  fill: var(--links);
 }
 
 @media screen and (max-width: 770px) {

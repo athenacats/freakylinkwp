@@ -32,7 +32,7 @@
             ?>
             <nav class="navbar navbar-expand-lg">
 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation"
                     aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -52,7 +52,7 @@
                             <a class="nav-link" href="archive.html"><i class="fas fa-archive fa-fw mr-2"></i>Blog Archive</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link btn btn-primary" href="contact.html"><i class="fas fa-envelope fa-fw mr-2"></i>Contact Us</a>
+                            <a class="nav-link" href="contact.html"><i class="fas fa-envelope fa-fw mr-2"></i>Contact Us</a>
                         </li>
 
                         <?php

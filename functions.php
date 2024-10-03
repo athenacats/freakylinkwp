@@ -12,7 +12,7 @@ function freakylink_register_styles()
 {
     $version = wp_get_theme()->get('Version');
     wp_enqueue_style('freakylink_bootstrap', "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css", array(), '1.0', 'all');
-   wp_enqueue_style('freakylink_fontawesome', "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css", array(), '1.0', "all"); 
+    wp_enqueue_style('freakylink_fontawesome', "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css", array(), '1.0', "all");
     wp_enqueue_style('freakylink_style', get_template_directory_uri() . "/style.css", array('freakylink_bootstrap'), $version, 'all');
 }
 
@@ -22,9 +22,10 @@ add_action('wp_enqueue_scripts', 'freakylink_register_styles');
 function freakylink_register_scripts()
 {
     wp_enqueue_script('freakylink_jquery', "https://code.jquery.com/jquery-3.7.1.slim.min.js", array(), '3.7.1', true);
-    wp_enqueue_script('freakylink_bootstrapjs', "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js", array(), '5.3.2', true);
+    wp_enqueue_script('freakylink_popper', "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js", array(), '2.11.8', true);
+    wp_enqueue_script('freakylink_bootstrapjs', "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js", array(), '5.3.3', true);
 
-    wp_enqueue_script('freakylink_main', get_template_directory_uri() . "/assets/js/scripts.js", array(), '1.0', true);
+    //wp_enqueue_script('freakylink_main', get_template_directory_uri() . "/assets/js/scripts.js", array(), '1.0', true);
 }
 
 add_action('wp_enqueue_scripts', 'freakylink_register_scripts');
@@ -40,16 +41,18 @@ function display_user_details()
     }
 }
 
-function get_cart_item_count() {
-    $cart_item_count = WC()->cart->get_cart_contents_count();    
+function get_cart_item_count()
+{
+    $cart_item_count = WC()->cart->get_cart_contents_count();
     return esc_html($cart_item_count);
 }
 
-function freakylink_menus() {
+function freakylink_menus()
+{
     $locations = array(
         'primary' => 'Primary Menu',
         'footer' => 'Footer Menu'
     );
-    register_nav_menus( $locations );
+    register_nav_menus($locations);
 }
-add_action( 'init', 'freakylink_menus' );
+add_action('init', 'freakylink_menus');
