@@ -39,32 +39,6 @@
                 <div id="navigation" class="collapse navbar-collapse flex-column">
 
                     <ul class="navbar-nav text-sm-center text-md-left">
-
-                        <li class="nav-item active">
-                            <?php
-                            $user_display_name = display_user_details();
-                            if (empty($user_display_name)) {
-                                echo '<a href="/login">Login</a>';
-                            }
-                            ?>
-                        </li>
-                        <li class="menuContainer">
-                            <?php
-                            $user_display_name = display_user_details();
-                            if (!empty($user_display_name)) {
-                                echo '<a>' . $user_display_name . '</a>';
-                            }
-                            ?> <div class="menu">
-                                <a class="menuLinks" routerLink="/profile" (click)="closeMenu()">Profile</a>
-                                <a class="menuLinks" routerLink="/orders" (click)="closeMenu()">Orders</a>
-                                <a class="menuLinks" (click)="logout()">Logout</a>
-                            </div>
-                        </li>
-                        <li class="cart">
-                            <a routerLink="/cart-page">Cart <span><?php
-                                                                    echo get_cart_item_count()
-                                                                    ?></span></a>
-                        </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="index.html"><i class="fas fa-home fa-fw mr-2"></i>Blog Home <span class="sr-only">(current)</span></a>
                         </li>
@@ -79,6 +53,32 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link btn btn-primary" href="contact.html"><i class="fas fa-envelope fa-fw mr-2"></i>Contact Us</a>
+                        </li>
+
+                        <?php
+                        $user_display_name = display_user_details();
+                        if (empty($user_display_name)) {
+                            echo '<li class="nav-item"><a href="/login" class="nav-link"><i class="fa-solid fa-right-to-bracket"></i>Login</a></li>';
+                        }
+                        ?>
+
+                        <?php
+                        $user_display_name = display_user_details();
+                        if (!empty($user_display_name)) {
+                            echo '<li class="menuContainer nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false"><i class="fa-solid fa-ghost fa-fw mr-2"></i>' . $user_display_name . '</a><div class="menu dropdown-menu">
+                            <a class="menuLinks dropdown-item" routerLink="/profile" (click)="closeMenu()">Profile</a>
+                            <a class="menuLinks dropdown-item" routerLink="/orders" (click)="closeMenu()">Orders</a>
+                            <a class="menuLinks dropdown-item" (click)="logout()">Logout</a>
+                        </div>
+                        </li>';
+                        }
+                        ?>
+
+                        <li class="cart nav-item">
+                            <a class="nav-link" href=""><i class="fa-solid fa-cart-shopping fa-fw mr-2"></i>Cart <span><?php
+                                                                                                                        echo get_cart_item_count()
+                                                                                                                        ?></span></a>
                         </li>
 
 
