@@ -3,7 +3,7 @@
 function freakylink_theme_support()
 {
     add_theme_support('title-tag'); //dynamically add title tag
-
+    add_theme_support('custom-logo');
 }
 add_action('after_setup_theme', 'freakylink_theme_support');
 

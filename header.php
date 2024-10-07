@@ -16,10 +16,11 @@
     <header class="page-title">
         <div class="header-container">
             <div class="left">
+
                 <img href="index.php"
-                    src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/freaky_link_logo.png"
+                    src="<?php echo esc_url(wp_get_attachment_image_src(get_theme_mod('custom_logo'), 'full')[0]); ?>"
                     alt="Logo for the Freaky Link" />
-                <a routerLink="/" class="logo">The Freaky Link</a>
+                <a routerLink="/" class="logo"><?php echo get_bloginfo('name'); ?></a>
             </div>
             <?php
             wp_nav_menu(
