@@ -64,41 +64,42 @@ class Custom_Walker_Nav_Menu extends Walker_Nav_Menu
     function start_lvl(&$output, $depth = 0, $args = null)
     {
         $indent = str_repeat("\t", $depth);
-        $submenu = ($depth > 0) ? ' sub-menu' : '';
-        $output .= "\n$indent<ul class=\"dropdown-menu$submenu depth_$depth\">\n";
+        $output .= "\n$indent<ul class=\"dropdown-menu\">\n";
     }
 
     // Start the element output.
     function start_el(&$output, $item, $depth = 0, $args = null, $id = 0)
     {
         $indent = ($depth) ? str_repeat("\t", $depth) : '';
-        $classes = empty($item->classes) ? array() : (array) $item->classes;
-        $classes[] = ($item->current || $item->current_item_ancestor) ? 'active' : '';
-        $classes[] = 'nav-item';
-        $classes[] = ($depth && $args->walker->has_children) ? 'dropdown-submenu' : '';
 
-        $class_names = join(' ', apply_filters('nav_menu_css_class', array_filter($classes), $item, $args, $depth));
-        $class_names = $class_names ? ' class="' . esc_attr($class_names) . '"' : '';
+        // Add 'nav-item' class to <li>
+        $classes = 'nav-item';
+        $class_names = ' class="' . esc_attr($classes) . '"';
 
-        $id = apply_filters('nav_menu_item_id', 'menu-item-' . $item->ID, $item, $args, $depth);
-        $id = $id ? ' id="' . esc_attr($id) . '"' : '';
+        // Start the <li> element
+        $output .= $indent . '<li' . $class_names . '>';
 
-        $output .= $indent . '<li' . $id . $class_names . '>';
-
+        // Set up the attributes for the <a> link
         $atts = array();
-        $atts['title'] = !empty($item->attr_title) ? $item->attr_title : '';
-        $atts['target'] = !empty($item->target) ? $item->target : '';
-        $atts['rel'] = !empty($item->xfn) ? $item->xfn : '';
         $atts['href'] = !empty($item->url) ? $item->url : '';
+        $atts['class'] = 'nav-link';  // Add 'nav-link' class to <a>
 
-        $atts['class'] = 'nav-link';
-        if ($depth === 0 && $args->walker->has_children) {
-            $atts['class'] .= ' dropdown-toggle';
-            $atts['data-toggle'] = 'dropdown';
-            $atts['aria-haspopup'] = 'true';
-            $atts['aria-expanded'] = 'false';
+        $icon = '';
+        if (strpos(strtolower($item->title), 'contact') !== false) {
+            $icon = '<i class="fas fa-envelope fa-fw mr-2"></i>'; // Envelope icon for contact
+        } elseif (strpos(strtolower($item->title), 'blog') !== false) {
+            $icon = '<i class="fas fa-blog fa-fw mr-2"></i>'; // Blog icon for blog pages
+        } else if (strpos(strtolower($item->title), 'home') !== false) {
+            $icon = '<i class="fas fa-home fa-fw mr-2"></i>';
+        } else if (strpos(strtolower($item->title), 'checkout') !== false) {
+            $icon = '<i class="fa-solid fa-cart-shopping fa-fw mr-2"></i>';
+        } else if (strpos(strtolower($item->title), 'cart') !== false) {
+            $icon = '<i class="fa-solid fa-cart-shopping fa-fw mr-2"></i>';
+        } else {
+            $icon = '<i class="fas fa-file-alt fa-fw mr-2"></i>'; // Default icon
         }
 
+        // Build the <a> tag with the attributes
         $attributes = '';
         foreach ($atts as $attr => $value) {
             if (!empty($value)) {
@@ -106,13 +107,14 @@ class Custom_Walker_Nav_Menu extends Walker_Nav_Menu
             }
         }
 
-        $item_output = $args->before;
-        $item_output .= '<a' . $attributes . '>';
-        $item_output .= $args->link_before . apply_filters('the_title', $item->title, $item->ID) . $args->link_after;
+        // The HTML for the link text, wrapped in <a>
+        $item_output = '<a' . $attributes . '>';
+        $item_output .= $icon; // Add the icon before the link text
+        $item_output .= apply_filters('the_title', $item->title, $item->ID);  // Add link text
         $item_output .= '</a>';
-        $item_output .= $args->after;
 
-        $output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
+        // Append the <a> tag to the <li>
+        $output .= $item_output;
     }
 
     // End the element output.
