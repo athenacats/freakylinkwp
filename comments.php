@@ -8,7 +8,7 @@
             if (! have_comments()) {
                 echo "Leave a Comment";
             } else {
-                echo get_comment_count() . " Comments";
+                echo get_comments_number() . " Comments";
             }
             ?>
 
@@ -20,7 +20,7 @@
 
 
         <?php
-        wp_list_comments(array('avatar_size' => 120, 'style' => 'div'));
+        wp_list_comments(array('avatar_size' => 50, 'style' => 'div'));
 
         ?>
 
