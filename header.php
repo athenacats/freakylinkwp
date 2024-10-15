@@ -51,54 +51,6 @@
 
                     )
                     ?>
-
-
-
-                    <ul class="navbar-nav text-sm-center text-md-left">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="index.html"><i class="fas fa-home fa-fw mr-2"></i>Blog Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="post.html"><i class="fas fa-file-alt fa-fw mr-2"></i>Blog Post</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="page.html"><i class="fas fa-file-image fa-fw mr-2"></i>Blog Page</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="archive.html"><i class="fas fa-archive fa-fw mr-2"></i>Blog Archive</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html"><i class="fas fa-envelope fa-fw mr-2"></i>Contact Us</a>
-                        </li>
-
-                        <?php
-                        $user_display_name = display_user_details();
-                        if (empty($user_display_name)) {
-                            echo '<li class="nav-item"><a href="/login" class="nav-link"><i class="fa-solid fa-right-to-bracket"></i>Login</a></li>';
-                        }
-                        ?>
-
-                        <?php
-                        $user_display_name = display_user_details();
-                        if (!empty($user_display_name)) {
-                            echo '<li class="menuContainer nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false"><i class="fa-solid fa-ghost fa-fw mr-2"></i>' . $user_display_name . '</a><div class="menu dropdown-menu">
-                            <a class="menuLinks dropdown-item" routerLink="/profile" (click)="closeMenu()">Profile</a>
-                            <a class="menuLinks dropdown-item" routerLink="/orders" (click)="closeMenu()">Orders</a>
-                            <a class="menuLinks dropdown-item" (click)="logout()">Logout</a>
-                        </div>
-                        </li>';
-                        }
-                        ?>
-
-                        <li class="cart nav-item">
-                            <a class="nav-link" href=""><i class="fa-solid fa-cart-shopping fa-fw mr-2"></i>Cart <span><?php
-                                                                                                                        echo get_cart_item_count()
-                                                                                                                        ?></span></a>
-                        </li>
-
-
-                    </ul>
                 </div>
             </nav>
         </div>

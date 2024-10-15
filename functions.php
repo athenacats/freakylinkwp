@@ -95,6 +95,12 @@ class Custom_Walker_Nav_Menu extends Walker_Nav_Menu
             $icon = '<i class="fa-solid fa-cart-shopping fa-fw mr-2"></i>';
         } else if (strpos(strtolower($item->title), 'cart') !== false) {
             $icon = '<i class="fa-solid fa-cart-shopping fa-fw mr-2"></i>';
+        } elseif (
+            strpos(strtolower($item->title), 'account') !== false ||
+            strpos(strtolower($item->title), 'login') !== false ||
+            strpos(strtolower($item->title), 'sign up') !== false
+        ) {
+            $icon = '<i class="fa-solid fa-ghost fa-fw mr-2"></i>';
         } else {
             $icon = '<i class="fas fa-file-alt fa-fw mr-2"></i>'; // Default icon
         }
