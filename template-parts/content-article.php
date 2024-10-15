@@ -7,5 +7,7 @@
     </div>
     <div>
         <?php
-        the_content(); ?></div>
+        the_content(); ?>
+        <?php comments_template()  ?>
+    </div>
 </div

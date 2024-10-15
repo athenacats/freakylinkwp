@@ -703,6 +703,7 @@ header.left {
 }
 
 .comment-reply-title {
+  color: var(--shadow);
   margin: 0 0 4rem 0;
   text-align: center;
 }
@@ -913,8 +914,8 @@ div.comment:first-of-type {
 
 .comment-respond .comment-notes,
 .comment-respond .logged-in-as {
-  color: #6d6d6d;
-  font-size: 1.6rem;
+  color: var(--shadow);
+  font-size: 1.3rem;
   line-height: 1.4;
   margin: -3rem 0 4rem 0;
   text-align: center;
@@ -923,7 +924,9 @@ div.comment:first-of-type {
 .comment-respond .comment-notes a,
 .comment-respond .logged-in-as a {
   color: inherit;
-  text-decoration: none;
+  font-size: inherit;
+  text-decoration: underline;
+  font-family: "EB Garamond", sans-serif;
 }
 
 .comment-respond .comment-notes a:focus,
@@ -931,6 +934,7 @@ div.comment:first-of-type {
 .comment-respond .logged-in-as a:focus,
 .comment-respond .logged-in-as a:hover {
   text-decoration: underline;
+  color: var(--links);
 }
 
 .comment-respond p {
@@ -974,6 +978,11 @@ div.comment:first-of-type {
 
 .comment-respond #submit {
   display: block;
+  color: var(--secondary);
+  background-color: var(--links);
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
 }
 
 .comment-respond .comments-closed {
