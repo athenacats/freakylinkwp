@@ -16,11 +16,11 @@
     <header class="page-title">
         <div class="header-container">
             <div class="left">
-
-                <img href="index.php"
-                    src="<?php echo esc_url(wp_get_attachment_image_src(get_theme_mod('custom_logo'), 'full')[0]); ?>"
-                    alt="<?php echo get_bloginfo('name'); ?>" />
-                <a routerLink="/" class="logo"><?php echo get_bloginfo('name'); ?></a>
+                <a href="/">
+                    <img href="/"
+                        src="<?php echo esc_url(wp_get_attachment_image_src(get_theme_mod('custom_logo'), 'full')[0]); ?>"
+                        alt="<?php echo get_bloginfo('name'); ?>" /> </a>
+                <a href="/" class="logo cursor-pointer"><?php echo get_bloginfo('name'); ?></a>
             </div>
             <?php
             wp_nav_menu(

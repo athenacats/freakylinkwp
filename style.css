@@ -672,3 +672,26 @@ header.left {
     font-size: 0.9rem;
   }
 }
+
+.meta {
+  color: var(--shadow);
+  font-size: 0.9rem;
+}
+
+.meta span {
+  display: inline-block;
+  margin-right: 0.25em;
+}
+
+.meta span a {
+  color: var(--shadow);
+  font-size: 0.9rem;
+}
+.meta span.tag {
+  background-color: var(--links);
+  padding: 0 0.5em;
+  border-radius: 5px;
+}
+.meta span a:hover {
+  color: var(--secondary);
+}
