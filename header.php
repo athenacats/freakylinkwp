@@ -19,7 +19,7 @@
 
                 <img href="index.php"
                     src="<?php echo esc_url(wp_get_attachment_image_src(get_theme_mod('custom_logo'), 'full')[0]); ?>"
-                    alt="Logo for the Freaky Link" />
+                    alt="<?php echo get_bloginfo('name'); ?>" />
                 <a routerLink="/" class="logo"><?php echo get_bloginfo('name'); ?></a>
             </div>
             <?php
