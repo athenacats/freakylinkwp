@@ -1,7 +1,7 @@
-<footer class="footer text-center py-4">
+<footer class="footer text-center py-4 d-flex flex-column">
 
+    <?php dynamic_sidebar('footer') ?>
 
-    <p class="copyright"><a href="https://chena.dev/">Copyright &copy; Freaky link 2024</a></p>
 
 
 </footer>

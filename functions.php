@@ -139,11 +139,22 @@ function freakylink_widget_areas()
             'after_title' => '</h2>',
             'before_widget' => '<div class="widget-area">',
             'after_widget' => '</div>',
-        ),
+
+            'name' => 'Header',
+            'id' => 'header',
+            'description' => 'Add widgets to this header',
+        )
+    );
+    register_sidebar(
         array(
-            'name' => 'Sidebar',
-            'id' => 'sidebar',
-            'description' => 'Add widgets to this sidebar',
+            'before_title' => '<h2>',
+            'after_title' => '</h2>',
+            'before_widget' => '<div class="widget-area">',
+            'after_widget' => '</div>',
+
+            'name' => 'Footer',
+            'id' => 'footer',
+            'description' => 'Add widgets to this footer',
         )
     );
 }
