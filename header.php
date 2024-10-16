@@ -58,9 +58,8 @@
     </header>
     <div class="widget-bar py-2"><?php dynamic_sidebar('header') ?></div>
     <div class='search'>
+        <?php get_search_form() ?>
 
-        <input class="search-input" #s type="text" placeholder="Search Our Catalog" (keyup.enter)="search(s.value)"
-            [value]="searchTerm" />
-        <button class="search-button" (click)="search(s.value)">Search</button>
+
 
     </div>
