@@ -1021,3 +1021,28 @@ div.comment:first-of-type {
 .comment-reply-title small a:hover {
   text-decoration: underline;
 }
+
+.post .title {
+  font-size: 1.275rem;
+}
+
+.post .title a {
+  color: var(--shadow);
+}
+
+.post .title a:hover {
+  color: var(--links);
+}
+
+.post .post-thumb {
+  max-width: 100px;
+  border-radius: 2px;
+}
+
+.post .intro {
+  font-size: 0.9rem;
+}
+
+.post .more-link {
+  font-size: 0.875rem;
+}
