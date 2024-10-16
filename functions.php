@@ -135,8 +135,8 @@ function freakylink_widget_areas()
 {
     register_sidebar(
         array(
-            'before_title' => '',
-            'after_title' => '',
+            'before_title' => '<h2>',
+            'after_title' => '</h2>',
             'before_widget' => '<div class="widget-area">',
             'after_widget' => '</div>',
         ),

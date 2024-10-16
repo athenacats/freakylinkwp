@@ -54,7 +54,9 @@
                 </div>
             </nav>
         </div>
+
     </header>
+    <div class="widget-bar py-2"><?php dynamic_sidebar() ?></div>
     <div class='search'>
 
         <input class="search-input" #s type="text" placeholder="Search Our Catalog" (keyup.enter)="search(s.value)"

@@ -1046,3 +1046,8 @@ div.comment:first-of-type {
 .post .more-link {
   font-size: 0.875rem;
 }
+
+.widget-bar {
+  width: 100%;
+  background-color: var(--secondary);
+}
