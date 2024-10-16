@@ -130,3 +130,22 @@ class Custom_Walker_Nav_Menu extends Walker_Nav_Menu
         $output .= "</li>\n";
     }
 }
+
+function freakylink_widget_areas()
+{
+    register_sidebar(
+        array(
+            'before_title' => '',
+            'after_title' => '',
+            'before_widget' => '<div class="widget-area">',
+            'after_widget' => '</div>',
+        ),
+        array(
+            'name' => 'Sidebar',
+            'id' => 'sidebar',
+            'description' => 'Add widgets to this sidebar',
+        )
+    );
+}
+
+add_action('widgets_init', 'freakylink_widget_areas');
